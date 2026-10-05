@@ -1,0 +1,251 @@
+body {
+  background:
+    linear-gradient(
+      rgba(243, 246, 249, 0.30),
+      rgba(243, 246, 249, 0.30)
+    ),
+    url('/dairy-banner.png') center / cover no-repeat fixed;
+  color: #203045;
+  font-family: system-ui, sans-serif;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+aside {
+  width: 245px;
+  background: #103a36;
+  color: #fff;
+  padding: 30px 20px;
+  flex-shrink: 0;
+}
+
+aside p {
+  color: #a6cbc3;
+  font-size: 14px;
+}
+
+aside small {
+  display: block;
+  margin-top: 35px;
+  color: #a6cbc3;
+}
+
+.navitem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: #d1e6e1;
+  padding: 13px 15px;
+  margin: 5px 0;
+  border-radius: 9px;
+}
+
+.navitem.active,
+.navitem:hover {
+  background: #286059;
+  color: white;
+}
+
+main {
+  padding: 35px;
+  width: 100%;
+  min-width: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px #163d3610;
+}
+
+.card h2 {
+  margin-top: 12px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  padding: 25px;
+  margin-top: 22px;
+  box-shadow: 0 6px 22px #163d3610;
+}
+
+.fields {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.field {
+  min-width: 180px;
+  flex: 1;
+}
+
+.field input,
+.field select {
+  margin-top: 7px;
+}
+
+.btn-primary {
+  background: #176b59;
+  border-color: #176b59;
+}
+
+.total {
+  text-align: right;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+th {
+  white-space: nowrap;
+}
+
+.dairy-hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 35, 25, 0.7),
+      rgba(6, 35, 25, 0.05)
+    ),
+    url('/dairy-banner.png') center / cover;
+  min-height: 300px;
+  border-radius: 20px;
+  color: #fff;
+  padding: 40px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.dairy-hero h2 {
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.hero-label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #cfe9cf;
+}
+
+.dairy-hero p {
+  color: #e0eade;
+}
+
+@media (max-width: 800px) {
+  .app {
+    display: block;
+  }
+
+  aside {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .navitem {
+    display: inline-block;
+    width: auto;
+  }
+
+  aside small {
+    display: none;
+  }
+
+  main {
+    padding: 18px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .dairy-hero {
+    padding: 24px;
+    min-height: 280px;
+    background-position: 60% center;
+  }
+
+  .dairy-hero h2 {
+    font-size: 25px;
+  }
+}
+
+@media print {
+  .no-print,
+  .dairy-hero {
+    display: none !important;
+  }
+
+  .app {
+    display: block;
+  }
+
+  body {
+    background: white;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .panel,
+  .card {
+    background: white;
+    box-shadow: none;
+  }
+
+  .panel {
+    padding: 0;
+  }
+
+  .table {
+    font-size: 11px;
+  }
+
+  .table-responsive {
+    overflow: visible;
+  }
+
+  tr {
+    break-inside: avoid;
+  }
+}
